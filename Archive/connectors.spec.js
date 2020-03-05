@@ -13,12 +13,9 @@ context('Connectors', () => {
       })
   })
 
-  it('.its() - get properties on the current subject', () => {
+  it('.its() - npm run build', () => {
     // https://on.cypress.io/its
-    cy.get('.connectors-its-ul>li')
-      // calls the 'length' property yielding that value
-      .its('length')
-      .should('be.gt', 2)
+    cy.exec('npm run build')
   })
 
   it('.invoke() - invoke a function on the current subject', () => {
